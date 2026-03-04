@@ -1,2 +1,6 @@
 project:
   type: website
+  output-dir: docs
+
+website:
+  title: "West of England Digital Office - Research and Analysis Updates"
