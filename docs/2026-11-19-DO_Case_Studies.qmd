@@ -1,0 +1,85 @@
+---
+title: "West of England Digital Office Pilot Evaluation - Case Studies"
+format: html
+author: Simon Moss (Senior Analyst), West of England MCA
+date: last-modified
+title-block-banner: "#1D4F2B"
+execute:
+  echo: false
+  warning: false
+  message: false
+  results: "asis"
+---
+```{r setup, include=FALSE}
+source("C:/Users/Simon.Moss/projects/analysis/DO1_WP.R")
+source("C:/Users/Simon.Moss/projects/analysis/DO2_BANES.R")
+
+```
+---
+
+The West of England Mayoral Combined Authority (MCA) has set up a Digital Office pilot which will run until October 2027. The aim of the Digital Office is to deliver co-ordinated and targeted interventions to meet the targets outlined in the Digital Plan, delivering improved digital connectivity for people and businesses across the region.
+
+An evaluation of the Digital Office pilot is being delivered with the aim of providing evidence to support the combined authority’s decision on whether to progress the Digital Office to a Full Business Case and, potentially, establish it as a Business-As-Usual (BAU) feature of the MCA. The evaluation considers the Digital Office’s contribution through its four functions - Data, Streamlining Processes, Outreach and Concierge - and assesses the additional value created by combining these functions within a coordinated regional model.
+
+To support the full evaluation, three case studies have been identified with the aim of demonstrating examples of the four Digital Office functions in practice. Each of the case studies is focused on an example of Digital Office activity enabling deployment of digital infrastructure or setting the conditions for future investment.
+
+## Supporting small cell infrastructure deployment in Bath
+
+Small cells are low-cost, street-level infrastructure designed to add high-quality, secure mobile coverage. They are typically deployed on existing street-level assets (e.g., lampposts, bus stops) and are much smaller than traditional cell towers or masts. They can be useful for boosting mobile network coverage and capacity in areas with high footfall and built-up areas with high levels of interference.
+
+In response to interest from mobile network operators, Bath & North East Somerset Council (B&NES) were able to realise an investment opportunity through the deployment of small cell infrastructure at key city centre sites. Providing an example of the West of England Digital Office (DO)’s ‘Streamlining’ function, the DO was able to support B&NES through sharing of best practice and support with standardised documentation, such as Small Cell Agreement templates and process maps. Digital Office funding also resourced a Digital Project Officer within B&NES whose presence was key to realising the investment opportunity.
+
+```{r DO2_SMALL_CELLS_plot, echo=FALSE, message=FALSE, warning=FALSE}
+
+DO2_SMALL_CELLS_plot
+
+```
+<br>
+
+Using crowdsource mobile connectivity data, which takes performance readings from mobile devices, the Digital Office is able to identify any differences in mobile connectivity which have occurred since the deployment of small cells at seventeen different sites in the city centre. Geospatial data relating to the small cell sites has been overlaid onto the mobile connectivity data to assess whether mobile connectivity has changed in the immediate area around each site between July-September 2025 and July-September 2026. Mobile connectivity thresholds were set according to Ofcom's definition of required signal strength for 'Good' outdoor connectivity (≥ -95 dBm) and 'Fair' signal-to-noise ratio (>= 5 dB).
+
+As an additional step, Building Digital UK (BDUK) and Ordnance Survey data have been used to identify premises which fall within these areas and whether they are likely to have been affected by these changes. Affected premises have been categorised using Ordnance Survey classifications, into 'Residential', 'Commercial' or 'Other'. 
+
+Just under two-thirds of residential premises in the areas surrounding the small cell sites now meet the above thresholds for mobile connectivity (66%), a large increase compared with the proportion of premises meeting the threshold during the same period in 2025 (17%). There has also been a large increase in commercial premises meeting the threshold for 'Good' outdoor mobile connectivity when comparing 2025 readings with those collected in 2026 (39% and 78% respectively). It is worth noting that many factors can affect mobile connectivity as well as the performance readings which underpin this analysis. 
+
+[A press release relating to the investment](https://ontix.co.uk/o2-and-ontix-deploy-small-cells-to-boost-capacity-in-bath/) cites that the additional small cells will deliver enhanced user experience, support economic growth and ensure residents feel connected, safe and able to access services.
+
+## Identifying premises at risk of being 'left behind'
+
+Some smaller geographical areas within the West of England are at risk of exclusion from planned deployment of high-speed broadband infrastructure, whether through commercial builds or subsidised programmes [such as Project Gigabit.](https://www.gov.uk/guidance/project-gigabit-uk-gigabit-programme) Premises within these areas are at high risk of being ‘left behind’ as a result, experiencing poor fixed connectivity within the home or business environment.
+
+Providing an example of the DO’s ‘Data’ and ‘Outreach’ functions, the DO was able to use key datasets, asset registers and telecoms expertise to identify at-risk premises. Any significant barriers to deployment were also identified, along with existing network operator presence within the affected area. As a result, the DO was able to contact a network operator planning a nearby build to confirm that areas of Wick and Pucklechurch in South Gloucestershire were left out of rollout plans. Following this confirmation, the DO engaged with Building Digital UK (BDUK) – a unit within the Department for Science, Innovation and Technology (DSIT) – to raise the issue. BDUK have escalated the issue, and subsequent analysis of BDUK datasets suggests that affected premises are in the process of being included in future deployment plans. 
+
+```{r DO1_WICK_plot, echo=FALSE, message=FALSE, warning=FALSE}
+
+DO1_WICK_plot
+
+```
+<br>
+
+***Note: Small geospatial discrepancies are likely to explain some alignment issues between the OMR data and the ONS Lower Super Output Area (LSOA) boundary data which can be seen in the visualisation.***
+
+```{r DO1_PUCKLECHURCH_plot, echo=FALSE, message=FALSE, warning=FALSE}
+
+DO1_PUCKLECHURCH_plot
+
+```
+<br>
+
+***Note: Small geospatial discrepancies are likely to explain some alignment issues between the OMR data and the ONS Lower Super Output Area (LSOA) boundary data which can be seen in the visualisation.***
+
+Exploring BDUK Open Market Review (OMR) data from May 2026, an additional 273 premises were included in future deployment plans according to BDUK when compared with the January 2026 OMR dataset. This represents nearly one-quarter of all premises in the Wick and Pucklechurch area according to BDUK (22%). 
+
+It is worth noting that additional factors may have influenced these changes, such as changes to commercial build plans which are independent of any intervention by the West of England Digital Office. A further BDUK OMR dataset is due to be released in early 2027, at which point it is anticipated that more affected premises will be included in future deployment plans. Data relating to these premises continues to be monitored up to the point of deployment taking place.
+
+## Identifying potential sites for infrastructure deployment
+
+As well as boosting mobile network coverage and capacity in urban areas, small cells can be deployed in rural communities which are underserved by more traditional infrastructure. In addition to suitable street-level assets, discrete small cell deployment is possible on tall buildings which are largely unobstructed. Exploratory work has initially focused on Church of England (CofE) sites in the West of England which may be suited to such a deployment.
+
+Showcasing the ‘Data’ and ‘Concierge’ functions of the Digital Office, an initial connection was made between the DO and a delivery partner for network operators with an existing wayleave agreement in place. After mapping potential CofE sites against crowdsource mobile connectivity data, multiple sites were identified as being potentially suitable for small cell deployment. The sites identified are typically located in villages in South Gloucestershire and Bath & North East Somerset.
+
+**ANALYSIS TO FOLLOW**
+
+Where available, the DO has also used planning application data to support exploratory engagement, reviewing both live and historic applications to enhance understanding of whether the sites identified might provide viable alternatives and any learning which can be applied to future applications.
+
+---
